@@ -42,7 +42,7 @@ class Application extends Component {
           <CSSTransition key={key} classNames="route-transition" timeout={800}>
             <Switch location={location}>
               <Route exact path="/" component={Landing} />
-              <Route path="/story" component={Story} />
+              <Route exact path="/story" component={Story} />
               <Route exact path="/about" component={About} />
               <Route exact path="/share" component={Share} />
               <Route
