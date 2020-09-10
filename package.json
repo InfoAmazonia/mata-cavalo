@@ -1,4 +1,5 @@
 {
+  "homepage": "https://matacavalo.infoamazonia.org",
   "name": "infoamazonia",
   "version": "0.0.0",
   "description": "",
@@ -14,14 +15,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.git"
+    "url": "https://github.com/InfoAmazonia/mata-cavalo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta/issues"
+    "url": "https://github.com/InfoAmazonia/mata-cavalo/issues"
   },
-  "homepage": "https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta#readme",
   "dependencies": {
     "axios": "^0.17.1",
     "es6-set": "^0.1.5",
