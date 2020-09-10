@@ -1,0 +1,10 @@
+[
+  {
+    "id": "gallery.photos_label",
+    "defaultMessage": "photos"
+  },
+  {
+    "id": "gallery.open_button",
+    "defaultMessage": "photos"
+  }
+]

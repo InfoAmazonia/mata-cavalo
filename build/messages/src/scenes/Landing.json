@@ -1,0 +1,26 @@
+[
+  {
+    "id": "general.author",
+    "defaultMessage": "por Vandré Fonseca e Bruno Kelly"
+  },
+  {
+    "id": "general.publishDate",
+    "defaultMessage": "31 de julho de 2018"
+  },
+  {
+    "id": "general.tagline",
+    "defaultMessage": "O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)"
+  },
+  {
+    "id": "general.startOver",
+    "defaultMessage": "Começar do início"
+  },
+  {
+    "id": "general.continueReading",
+    "defaultMessage": "Continuar lendo"
+  },
+  {
+    "id": "general.readStory",
+    "defaultMessage": "Leia a reportagem"
+  }
+]

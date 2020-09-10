@@ -1,0 +1,54 @@
+[
+  {
+    "id": "about.title",
+    "defaultMessage": "Sobre"
+  },
+  {
+    "id": "head.title",
+    "defaultMessage": "A luta dos herdeiros de Mata Cavalo pelo título do quilombo"
+  },
+  {
+    "id": "about.close",
+    "defaultMessage": "Continuar lendo"
+  },
+  {
+    "id": "about.intro",
+    "defaultMessage": "Esta reportagem foi produzida pela {amazoniareal} e faz parte do especial “{olhandopordentrodafloresta}”."
+  },
+  {
+    "id": "about.reporter",
+    "defaultMessage": "Repórter"
+  },
+  {
+    "id": "about.photos_videos",
+    "defaultMessage": "Fotos e vídeos"
+  },
+  {
+    "id": "about.editor_photo",
+    "defaultMessage": "Editor de fotografia"
+  },
+  {
+    "id": "about.intern",
+    "defaultMessage": "Estagiária"
+  },
+  {
+    "id": "about.coordwebdev",
+    "defaultMessage": "Coordenação de desenvolvimento web"
+  },
+  {
+    "id": "about.dev",
+    "defaultMessage": "Desenvolvimento web e design"
+  },
+  {
+    "id": "about.maker",
+    "defaultMessage": "Realização"
+  },
+  {
+    "id": "about.partnership",
+    "defaultMessage": "Parceria"
+  },
+  {
+    "id": "about.license",
+    "defaultMessage": "Todo o conteúdo publicado neste site está licenciado usando a licença Creative Commons – Atribuição 4.0 Internacional. Para qualquer outro uso, escreva-nos em redacao@amazoniareal.com.br"
+  }
+]
