@@ -1,0 +1,8 @@
+build
+node_modules
+!/public/.htaccess
+/public
+.git
+.DS_Store
+design
+files/photos/raw
