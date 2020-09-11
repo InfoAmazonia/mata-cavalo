@@ -13,7 +13,7 @@ let config = {
     modules: ["src", "files", "node_modules"]
   },
   output: {
-    path: path.resolve("docs"),
+    path: path.resolve("public"),
     publicPath: "/",
     filename: "[name]-[chunkhash].js"
   },
