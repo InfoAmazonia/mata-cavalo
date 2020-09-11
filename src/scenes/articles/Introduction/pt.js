@@ -386,7 +386,7 @@ export default () => (
         title={"O Mata Cavalo"}
         subtitle={"Neste documentário da Amazônia Real, os herdeiros dos ancestrais africanos contam histórias da origem do Complexo Territorial Mato Cavalo." }
         imageUrl={require("images/matacavalo_doc.jpg")}
-        href={"//documentario.matacavalo.amazoniareal.com.br/"}
+        href={"//documentario.matacavalo.infoamazonia.org/"}
       />
     </Container>
   </article>
