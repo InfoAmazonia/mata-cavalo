@@ -4,6 +4,7 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const OfflinePlugin = require("offline-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 let config = {
   entry: {
@@ -27,7 +28,12 @@ let config = {
         LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
       },
       __REACT_DEVTOOLS_GLOBAL_HOOK__: ({ isDisabled: true })
-    })
+    }),
+    new CopyPlugin([{
+      context: 'src/',
+      from: 'CNAME',
+      to: ''
+    }])
   ],
   module: {
     loaders: [
@@ -82,10 +88,10 @@ const favicons = new FaviconsWebpackPlugin({
 });
 
 const pwa = new WebpackPwaManifest({
-  name: "Especial Olhando por Dentro da Floresta Amazônica",
-  short_name: "Especial Olhando por Dentro da Floresta Amazônica",
+  name: "O Mata Cavalo",
+  short_name: "O Mata Cavalo",
   description:
-    "The destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
+    "Reportagem 'A luta dos herdeiros de Mata Cavalo pelo título do quilombo' publicada em hotsite feito em React e produzida pela Amazônia Real com desenvolvimento do InfoAmazoniaThe destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
   background_color: "#fff",
   orientation: "portrait",
   start_url: "/?launcher=true",
