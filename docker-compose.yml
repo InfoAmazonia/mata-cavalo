@@ -4,10 +4,12 @@ services:
   # The Application
   app:
     build: .
-    # volumes:
+    volumes:
+      - app-volume:/usr/src/app
     #   - ./:/usr/src/app
     # volumes_from:
     #   - yarn-cache
+    working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
   # The Web Server
@@ -15,11 +17,16 @@ services:
     build:
       context: ./
       dockerfile: web.dockerfile
+    depends_on:
+      - app
     working_dir: /usr/src/app
     volumes_from:
       - app
     ports:
       - 8080:80
+
+volumes:
+  app-volume:
 
   # yarn-cache:
   #   image: busybox
