@@ -1,74 +1,92 @@
-# infoamazonia-por-dentro-da-floresta
-Especial: Olhando por dentro da floresta (Série de reportagens em REACT)
+# O Mata Cavalo
 
-# PRÉ REQUISITOS
-- Instalar o docker: https://docs.docker.com/install/
-- Instalar o git: https://git-scm.com/downloads
+Reportagem "A luta dos herdeiros de Mata Cavalo pelo título do quilombo" publicada em hotsite feito em React e produzida pela Amazônia Real com desenvolvimento do InfoAmazonia
 
-# INSTALAÇÃO DO SITE
+## Installation
 
-- CLONANDO O SITE DO GITHUB
-git clone https://github.com/studiocuboweb/infoamazonia-por-dentro-da-floresta.git
+### Requirements
 
-- INSTALANDO O NPM E AS DEPENDENCIAS
-docker run -v "$PWD":/usr/src/app -w /usr/src/app node:8 yarn install
+- node v10.1.x
+- npm v5.6.x
 
-- FAZENDO O BUILD
-docker-comose build
+### Build and start server
+
+Install dependencies:
+```
+$ npm install
+```
+
+Create dist folder and compile project
+```
+$ npm run predeploy
+```
+
+Access [http://localhost:3002/](http://localhost:3002/)
+
+Watch files
+```
+$ npm run watch
+```
 
 
-# LIGANDO O DOCKER
-docker-compose up (com visualização de log)
-docker-compose up -d (rodar em background)
+### Deploy app to GITHUB PAGES
 
-# DESLIGANDO O DOCKER
-docker-compose down
+```
+$ npm run deploy
+```
 
+OBS: open src/CNAME and change domain if needed
 
-# HEROKU DEPLOY
-https://blog.heroku.com/deploying-react-with-zero-configuration
+# RUNING WITH DOCKER
 
-# INSTALAR HEROKU:
-https://devcenter.heroku.com/articles/heroku-cli
+Install environment and dependencies
+```
+$ docker-compose build --no-cache
+```
 
-- Logar no heroku com o login e senha cadastrados no site
-heroku login
+Starting docker
+```
+$ docker-compose up
+```
+Create public folder and compile project (in docker bash)
+```
+docker$ npm run predeploy
+```
 
-- verificando APP atual
-heroku apps:info
+Access [http://localhost:3002/](http://localhost:3002/)
 
-# DEPLOY EM infoam-template-video
-https://infoam-template-video.herokuapp.com/
+### Deploy app to GITHUB PAGES
 
-heroku git:remote -a infoam-template-multimedia
-git checkout related-news
-git push heroku master
+```
+docker$ npm run deploy
+```
 
-# DEPLOY EM infoam-template-multimedia
-https://infoam-template-multimedia.herokuapp.com/
+### NOTES
+- If you use 2FA (2 factor authentication) on git hub, [follow these steps](https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8).
+  
+- When using docker you can use watch for save and auto compile files when developing. For this you have to copy dist and node_modules from docker to host and uncomment volumes in docker-compose.yml file. The steps are:
 
-heroku git:remote -a infoam-template-video
-git checkout template-video
-git push heroku master
+1. Copy dist and node_modules from docker to host (when docker-compose is up and running using bash from host)
+$ docker cp $(docker-compose ps -q app):/usr/src/app/node_modules .
+docker cp $(docker-compose ps -q app):/usr/src/app/yarn.lock .
+$ docker cp $(docker-compose ps -q app):/usr/src/app/public .
 
-# OUTROS PROCEDIMENTOS:
-- Apagando o local Storage do browser:
-Abrir o console dev do browser e rodar:
-localStorage.clear()
-localStorage.removeItem('elapsed-time')
+2. Uncomment dist and node_modules folder from .dockerignore file
 
-#BUILD EM PRODUCAO SEM DOCKER
-1- Instalar o yarn (falei node, mas estamos utilizando o yarn)
-https://yarnpkg.com/lang/en/docs/install/#debian-stable
+3. Uncomment Volumes from docker-compose.yml
 
-2- Instalar as dependências
-Na raiz do projeto onde está o package.json rodar o comando:
+4. docker-compose down
 
-yarn install
+5. docker-compose up
 
-Vai instalar as dependencias na pasta node_modules 
+6. Inside docker bash: docker-compose exec app bash
+```
+docker$ npm run watch
+```
 
-3- Fazer o build
-na raiz do projeto rodar o comando:
+### CREDITS
+[rafgraph](https://github.com/rafgraph/spa-github-pages) for the 404.html redirect (rewrite rule for github pages). It works! <br>
+[Natalie Cardot](https://medium.com/@nataliecardot/easily-deploy-a-create-react-app-project-to-github-pages-280529adb086) how to easily Deploy a Create React App Project to GitHub Pages. <br>
+[Ginny Fahs](https://medium.com/@ginnyfahs/github-error-authentication-failed-from-command-line-3a545bfd0ca8) how to authenticate on github with 2FA.<br>
+[Paulo Campos at Studio Cubo Web](https://github.com/studiocuboweb) for converting this site into github pages host
 
-npm run build
