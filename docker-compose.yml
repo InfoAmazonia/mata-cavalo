@@ -4,8 +4,8 @@ services:
   # The Application
   app:
     build: .
-    volumes:
-      - ./:/usr/src/app
+    # volumes:
+    #   - ./:/usr/src/app
     # volumes_from:
     #   - yarn-cache
     environment:
