@@ -6,8 +6,8 @@ services:
     build: .
     volumes:
       - ./:/usr/src/app
-    volumes_from:
-      - yarn-cache
+    # volumes_from:
+    #   - yarn-cache
     environment:
       - NODE_ENV=development
   # The Web Server
@@ -21,7 +21,7 @@ services:
     ports:
       - 8080:80
 
-  yarn-cache:
-    image: busybox
-    volumes:
-      - /root/.yarn-cache
+  # yarn-cache:
+  #   image: busybox
+  #   volumes:
+  #     - /root/.yarn-cache
