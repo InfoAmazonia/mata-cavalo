@@ -33,7 +33,12 @@ let config = {
       context: 'src/',
       from: 'CNAME',
       to: ''
-    }])
+    },{
+      context: 'src/',
+      from: '404.html',
+      to: ''
+    }
+  ])
   ],
   module: {
     loaders: [
