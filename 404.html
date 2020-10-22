@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Single Page Apps for GitHub Pages</title>
+    <title>A luta dos herdeiros de Mata Cavalo pelo título do quilombo – Amazônia Real</title>
+    <meta charset="utf-8" />
+    <meta name="fragment" content="!">
+    <meta name="description" content="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
+    <meta name="theme-color" content="#111">
+    <meta name="msapplication-navbutton-color" content="#111">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#111">
+    <meta property="og:title" content="A luta dos herdeiros de Mata Cavalo pelo título do quilombo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://matacavalo.infoamazonia.org/9ae3f77178e2a7265205140cb85945dc.jpg" />
+    <meta property="og:url"    content="https://matacavalo.infoamazonia.org/" />
+    <meta property="og:description" content="O território foi formado no século 19, quando negros africanos compraram ou ganharam as terras após o fim da escravidão no Brasil. Agora enfrentam dificuldades para aderir o Cadastro Ambiental Rural (CAR)" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://matacavalo.infoamazonia.org/9ae3f77178e2a7265205140cb85945dc.jpg"/>
+    <meta name="twitter:site" content="@amazonia_real"/>
+    <meta name="twitter:domain" content="Amazônia Real"/>
+    <meta name="twitter:creator" content="@amazonia_real"/>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="standout" href="https://matacavalo.infoamazonia.org/story"/>
     <script type="text/javascript">
+      // Start Single Page Apps for GitHub Pages
       // Single Page Apps for GitHub Pages
       // https://github.com/rafrex/spa-github-pages
       // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
       // ----------------------------------------------------------------------
-      // This script takes the current url and converts the path and query
-      // string into just a query string, and then redirects the browser
-      // to the new url with only a query string and hash fragment,
-      // e.g. http://www.foo.tld/one/two?a=b&c=d#qwe, becomes
-      // http://www.foo.tld/?p=/one/two&q=a=b~and~c=d#qwe
-      // Note: this 404.html file must be at least 512 bytes for it to work
-      // with Internet Explorer (it is currently > 512 bytes)
-
-      // If you're creating a Project Pages site and NOT using a custom domain,
-      // then set segmentCount to 1 (enterprise users may need to set it to > 1).
-      // This way the code will only replace the route part of the path, and not
-      // the real directory in which the app resides, for example:
-      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
-      // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
-      // Otherwise, leave segmentCount as 0.
-      var segmentCount = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+      // This script checks to see if a redirect is present in the query string
+      // and converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+      if (l.search) {
+      var q = {};
+      l.search.slice(1).split('&').forEach(function(v) {
+      var a = v.split('=');
+      q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+      });
+      if (q.p !== undefined) {
+      window.history.replaceState(null, null,
+      l.pathname.slice(0, -1) + (q.p || '') +
+      (q.q ? ('?' + q.q) : '') +
+      l.hash
       );
-
+      }
+      }
+      }(window.location))
+      // End Single Page Apps for GitHub Pages
     </script>
   </head>
   <body>
-  </body>
+    <div id="app"></div>
+    <script>window.twttr = false;</script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/main-b9727716a313d21b3551.js"></script></body>
 </html>
