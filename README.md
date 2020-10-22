@@ -68,7 +68,7 @@ docker$ npm run deploy
 
 1. Copy dist and node_modules from docker to host (when docker-compose is up and running using bash from host)
 $ docker cp $(docker-compose ps -q app):/usr/src/app/node_modules .
-docker cp $(docker-compose ps -q app):/usr/src/app/yarn.lock .
+$ docker cp $(docker-compose ps -q app):/usr/src/app/yarn.lock .
 $ docker cp $(docker-compose ps -q app):/usr/src/app/public .
 
 2. Uncomment dist and node_modules folder from .dockerignore file
